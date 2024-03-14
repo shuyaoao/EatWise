@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <h1>What's in My Fridge</h1>
-    <!-- <DateView /> -->
+    <DateView />
     <TableView :columns="tableColumns" :items="tableData" />
     <!-- <test /> -->
   </div>
@@ -14,7 +14,8 @@ import TableView from './components/TableView.vue';
 export default {
   name: 'App',
   components: {
-    TableView
+    TableView,
+    DateView
   },
   data() {
     return {
@@ -23,7 +24,8 @@ export default {
         { key: 'Quantity', label: 'Quantity' },
         { key: 'Units', label: 'Units' },
         { key: 'DaysLeft', label: 'Days Left' }
-      ]
+      ], 
+      tableData: []
     };
   }
 };
