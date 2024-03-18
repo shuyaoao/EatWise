@@ -1,9 +1,8 @@
 <template>
-    <div>
-      <h3>Today's Date: {{ currentDate }}</h3>
-      <p></p>
-    </div>
-  </template>
+  <div>
+    <h3 class="date-view">Today's Date: {{ currentDate }}</h3>
+  </div>
+</template>
   
   <script>
   export default {
@@ -20,6 +19,14 @@
   };
   </script>
   
-  <style>
-  /* Add your component-specific styles here */
-  </style>
+<style>
+
+  .date-view {
+    color: #0C6D59; 
+    text-emphasis: 1px;
+    font-family:inter; 
+    border: 1px solid #0C6D59; 
+    padding: 4px 8px;
+    border-radius: 21px;
+  }
+</style>

@@ -1,20 +1,22 @@
 <template>
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th v-for="column in columns" :key="column.key">{{ column.label }}</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr v-for="item in items" :key="item.id">
-                    <td>{{ item.itemName }}</td>
-                    <td>{{ item.Quantity }}</td>
-                    <td>{{ item.Units }}</td>
-                    <td>{{ item.DaysLeft }}</td>
-                </tr>
-            </tbody>
-        </table>
+    <div id = "app">
+        <div class = "table-container">
+            <table class = "table">
+                <thead>
+                    <tr>
+                        <th v-for="column in columns" :key="column.key">{{ column.label }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="item in items" :key="item.id">
+                        <td>{{ item.itemName }}</td>
+                        <td>{{ item.Quantity }}</td>
+                        <td>{{ item.Units }}</td>
+                        <td>{{ item.DaysLeft }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 </template>
 
@@ -60,5 +62,42 @@ export default {
 </script>
 
 <style>
-/* Add component-specific styles here */
+    #app {
+        background-color: #FFF6E9;
+        min-height: 100vh;
+    }
+
+    .table-container {
+        padding: 20px;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 10px;
+        border-radius: 21px;
+        border: 1px solid #0C6D59;
+        padding: 8px 16px;
+    }
+
+    .table tr, .table td, .table th {
+        text-align: center;
+        font-family: inter;
+    }
+
+    .table th {
+        color: black;
+        border-bottom: 3px solid #0C6D59;
+        border-spacing: 3cm;
+    }
+
+    .table td {
+        color: black;
+        padding: 3px 1px;
+        border-top: 1px solid #0C6D59;
+    }
+
+    .table tr:first-child td{
+        border-top: none; 
+    }
 </style>
